@@ -1,0 +1,38 @@
+{
+  "name": "@rummel/web-theme",
+  "version": "1.0.0",
+  "description": "Rummel Technologies design system for web applications",
+  "main": "index.js",
+  "files": [
+    "css/",
+    "scss/",
+    "tailwind.config.js",
+    "README.md"
+  ],
+  "keywords": [
+    "design-system",
+    "theme",
+    "css",
+    "scss",
+    "tailwind",
+    "rummel-technologies"
+  ],
+  "author": "Rummel Technologies",
+  "license": "PROPRIETARY",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rummel-technologies/services.git",
+    "directory": "packages/web-theme"
+  },
+  "peerDependencies": {
+    "sass": "^1.69.0"
+  },
+  "devDependencies": {
+    "sass": "^1.69.0",
+    "tailwindcss": "^3.4.0"
+  },
+  "scripts": {
+    "build": "echo 'No build step required'",
+    "test": "echo 'No tests defined'"
+  }
+}

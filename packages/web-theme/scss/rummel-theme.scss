@@ -1,0 +1,214 @@
+/**
+ * Rummel Technologies Design System
+ * Main SCSS Entry Point
+ *
+ * Import this file to get the complete theme system
+ * @import '~@rummel/web-theme/scss/rummel-theme';
+ */
+
+// Import variables first
+@import 'variables';
+
+// Import mixins
+@import 'mixins';
+
+// Base styles
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: $rt-font-family-primary;
+  font-size: 16px;
+  line-height: $rt-line-height-normal;
+  color: $rt-color-gray-900;
+  background-color: $rt-color-background-light;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+// Dark theme
+[data-theme="dark"] {
+  html {
+    color: $rt-color-gray-100;
+    background-color: $rt-color-background-dark;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    html {
+      color: $rt-color-gray-100;
+      background-color: $rt-color-background-dark;
+    }
+  }
+}
+
+// Typography elements
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 $rt-spacing-4;
+  font-weight: $rt-font-weight-semibold;
+}
+
+h1 {
+  @include text-headline-large;
+}
+
+h2 {
+  @include text-headline-medium;
+}
+
+h3 {
+  @include text-headline-small;
+}
+
+h4 {
+  @include text-title-large;
+}
+
+h5 {
+  @include text-title-medium;
+}
+
+h6 {
+  @include text-title-small;
+}
+
+p {
+  margin: 0 0 $rt-spacing-4;
+  @include text-body-medium;
+}
+
+a {
+  color: $rt-color-primary;
+  text-decoration: none;
+  transition: color $rt-duration-fast $rt-easing-ease-in-out;
+
+  &:hover {
+    color: $rt-color-primary-dark;
+    text-decoration: underline;
+  }
+
+  @include focus-visible;
+}
+
+code, pre {
+  font-family: $rt-font-family-monospace;
+  font-size: $rt-font-size-sm;
+}
+
+code {
+  background-color: $rt-color-gray-100;
+  padding: 2px 6px;
+  border-radius: $rt-radius-sm;
+}
+
+pre {
+  background-color: $rt-color-gray-100;
+  padding: $rt-spacing-4;
+  border-radius: $rt-radius-base;
+  overflow-x: auto;
+
+  code {
+    background-color: transparent;
+    padding: 0;
+  }
+}
+
+// Utility classes
+.rt-container {
+  @include container;
+}
+
+.rt-flex-center {
+  @include flex-center;
+}
+
+.rt-flex-between {
+  @include flex-between;
+}
+
+.rt-flex-column {
+  @include flex-column;
+}
+
+.rt-truncate {
+  @include truncate;
+}
+
+.rt-visually-hidden {
+  @include visually-hidden;
+}
+
+// Button classes
+.rt-btn {
+  @include button-base;
+}
+
+.rt-btn-primary {
+  @include button-primary;
+}
+
+.rt-btn-secondary {
+  @include button-secondary;
+}
+
+.rt-btn-outlined {
+  @include button-outlined;
+}
+
+.rt-btn-text {
+  @include button-text;
+}
+
+// Card class
+.rt-card {
+  @include card;
+}
+
+// Input class
+.rt-input {
+  @include input-field;
+}
+
+// Spacing utilities
+@each $key, $value in $rt-spacing {
+  .rt-m-#{$key} { margin: $value; }
+  .rt-mt-#{$key} { margin-top: $value; }
+  .rt-mr-#{$key} { margin-right: $value; }
+  .rt-mb-#{$key} { margin-bottom: $value; }
+  .rt-ml-#{$key} { margin-left: $value; }
+  .rt-mx-#{$key} { margin-left: $value; margin-right: $value; }
+  .rt-my-#{$key} { margin-top: $value; margin-bottom: $value; }
+
+  .rt-p-#{$key} { padding: $value; }
+  .rt-pt-#{$key} { padding-top: $value; }
+  .rt-pr-#{$key} { padding-right: $value; }
+  .rt-pb-#{$key} { padding-bottom: $value; }
+  .rt-pl-#{$key} { padding-left: $value; }
+  .rt-px-#{$key} { padding-left: $value; padding-right: $value; }
+  .rt-py-#{$key} { padding-top: $value; padding-bottom: $value; }
+}
+
+// Text color utilities
+.rt-text-primary { color: $rt-color-primary; }
+.rt-text-secondary { color: $rt-color-secondary; }
+.rt-text-success { color: $rt-color-success; }
+.rt-text-warning { color: $rt-color-warning; }
+.rt-text-error { color: $rt-color-error; }
+.rt-text-info { color: $rt-color-info; }
+.rt-text-muted { color: $rt-color-gray-600; }
+
+// Background color utilities
+.rt-bg-primary { background-color: $rt-color-primary; }
+.rt-bg-secondary { background-color: $rt-color-secondary; }
+.rt-bg-success { background-color: $rt-color-success; }
+.rt-bg-warning { background-color: $rt-color-warning; }
+.rt-bg-error { background-color: $rt-color-error; }
+.rt-bg-info { background-color: $rt-color-info; }
+.rt-bg-surface { background-color: $rt-color-surface-light; }

@@ -1,0 +1,43 @@
+{
+  "name": "@rummel/website-and-design-system",
+  "version": "1.0.0",
+  "description": "Rummel Technologies official website and design system",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "website"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=website",
+    "build": "npm run build --workspace=website",
+    "preview": "npm run preview --workspace=website",
+    "validate": "npm run validate:tokens && npm run validate:css && npm run validate:scss",
+    "validate:tokens": "node scripts/validate-tokens.js",
+    "validate:css": "echo '✅ CSS validation placeholder'",
+    "validate:scss": "npm run build:scss --workspace=packages/web-theme",
+    "build:scss": "npm run build --workspace=packages/web-theme",
+    "lint": "npm run lint --workspace=website",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
+    "install:all": "npm install && npm install --workspace=website && npm install --workspace=packages/web-theme"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rummel-technologies/rummel-technologies-site.git"
+  },
+  "keywords": [
+    "design-system",
+    "rummel-technologies",
+    "website",
+    "design-tokens",
+    "theme"
+  ],
+  "author": "Rummel Technologies",
+  "license": "PROPRIETARY",
+  "devDependencies": {
+    "prettier": "^3.1.0"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  }
+}

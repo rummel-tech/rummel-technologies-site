@@ -1,0 +1,358 @@
+/**
+ * Rummel Technologies Design System
+ * SCSS Mixins
+ *
+ * Reusable mixins for common patterns
+ */
+
+@import 'variables';
+
+// Responsive breakpoint mixin
+// Usage: @include breakpoint(tablet) { ... }
+@mixin breakpoint($breakpoint) {
+  @if map-has-key($rt-breakpoints, $breakpoint) {
+    @media (min-width: map-get($rt-breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint '#{$breakpoint}' not found in $rt-breakpoints map";
+  }
+}
+
+// Responsive breakpoint max-width mixin
+// Usage: @include breakpoint-max(tablet) { ... }
+@mixin breakpoint-max($breakpoint) {
+  @if map-has-key($rt-breakpoints, $breakpoint) {
+    @media (max-width: (map-get($rt-breakpoints, $breakpoint) - 1px)) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint '#{$breakpoint}' not found in $rt-breakpoints map";
+  }
+}
+
+// Typography preset mixin
+@mixin text-display-large {
+  font-size: 3.5625rem; // 57px
+  font-weight: $rt-font-weight-regular;
+  letter-spacing: -0.25px;
+  line-height: 1.12;
+}
+
+@mixin text-display-medium {
+  font-size: 2.8125rem; // 45px
+  font-weight: $rt-font-weight-regular;
+  letter-spacing: 0;
+  line-height: 1.16;
+}
+
+@mixin text-display-small {
+  font-size: $rt-font-size-4xl;
+  font-weight: $rt-font-weight-regular;
+  letter-spacing: 0;
+  line-height: 1.22;
+}
+
+@mixin text-headline-large {
+  font-size: 2rem; // 32px
+  font-weight: $rt-font-weight-regular;
+  letter-spacing: 0;
+  line-height: 1.25;
+}
+
+@mixin text-headline-medium {
+  font-size: 1.75rem; // 28px
+  font-weight: $rt-font-weight-regular;
+  letter-spacing: 0;
+  line-height: 1.29;
+}
+
+@mixin text-headline-small {
+  font-size: $rt-font-size-2xl;
+  font-weight: $rt-font-weight-regular;
+  letter-spacing: 0;
+  line-height: 1.33;
+}
+
+@mixin text-title-large {
+  font-size: 1.375rem; // 22px
+  font-weight: $rt-font-weight-medium;
+  letter-spacing: 0;
+  line-height: 1.27;
+}
+
+@mixin text-title-medium {
+  font-size: $rt-font-size-base;
+  font-weight: $rt-font-weight-medium;
+  letter-spacing: 0.15px;
+  line-height: 1.5;
+}
+
+@mixin text-title-small {
+  font-size: $rt-font-size-sm;
+  font-weight: $rt-font-weight-medium;
+  letter-spacing: 0.1px;
+  line-height: 1.43;
+}
+
+@mixin text-body-large {
+  font-size: $rt-font-size-base;
+  font-weight: $rt-font-weight-regular;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+}
+
+@mixin text-body-medium {
+  font-size: $rt-font-size-sm;
+  font-weight: $rt-font-weight-regular;
+  letter-spacing: 0.25px;
+  line-height: 1.43;
+}
+
+@mixin text-body-small {
+  font-size: $rt-font-size-xs;
+  font-weight: $rt-font-weight-regular;
+  letter-spacing: 0.4px;
+  line-height: 1.33;
+}
+
+@mixin text-label-large {
+  font-size: $rt-font-size-sm;
+  font-weight: $rt-font-weight-medium;
+  letter-spacing: 0.1px;
+  line-height: 1.43;
+}
+
+@mixin text-label-medium {
+  font-size: $rt-font-size-xs;
+  font-weight: $rt-font-weight-medium;
+  letter-spacing: 0.5px;
+  line-height: 1.33;
+}
+
+@mixin text-label-small {
+  font-size: 0.6875rem; // 11px
+  font-weight: $rt-font-weight-medium;
+  letter-spacing: 0.5px;
+  line-height: 1.45;
+}
+
+// Button mixin
+@mixin button-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: $rt-spacing-3 $rt-spacing-6;
+  border: none;
+  border-radius: $rt-radius-base;
+  font-family: $rt-font-family-primary;
+  font-size: $rt-font-size-sm;
+  font-weight: $rt-font-weight-medium;
+  line-height: 1.43;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all $rt-duration-fast $rt-easing-ease-in-out;
+  user-select: none;
+
+  &:focus {
+    outline: 2px solid $rt-color-primary;
+    outline-offset: 2px;
+  }
+
+  &:disabled {
+    opacity: 0.38;
+    cursor: not-allowed;
+  }
+}
+
+@mixin button-primary {
+  @include button-base;
+  background-color: $rt-color-primary;
+  color: $rt-color-white;
+
+  &:hover:not(:disabled) {
+    background-color: $rt-color-primary-dark;
+    box-shadow: $rt-shadow-sm;
+  }
+
+  &:active:not(:disabled) {
+    background-color: $rt-color-primary-darker;
+  }
+}
+
+@mixin button-secondary {
+  @include button-base;
+  background-color: $rt-color-secondary;
+  color: $rt-color-white;
+
+  &:hover:not(:disabled) {
+    background-color: darken($rt-color-secondary, 10%);
+    box-shadow: $rt-shadow-sm;
+  }
+}
+
+@mixin button-outlined {
+  @include button-base;
+  background-color: transparent;
+  color: $rt-color-primary;
+  border: 1px solid $rt-color-primary;
+
+  &:hover:not(:disabled) {
+    background-color: rgba($rt-color-primary, 0.08);
+  }
+
+  &:active:not(:disabled) {
+    background-color: rgba($rt-color-primary, 0.12);
+  }
+}
+
+@mixin button-text {
+  @include button-base;
+  background-color: transparent;
+  color: $rt-color-primary;
+  padding: $rt-spacing-2 $rt-spacing-4;
+
+  &:hover:not(:disabled) {
+    background-color: rgba($rt-color-primary, 0.08);
+  }
+
+  &:active:not(:disabled) {
+    background-color: rgba($rt-color-primary, 0.12);
+  }
+}
+
+// Card mixin
+@mixin card {
+  background-color: $rt-color-surface-light;
+  border-radius: $rt-radius-base;
+  box-shadow: $rt-shadow-sm;
+  padding: $rt-spacing-4;
+  transition: box-shadow $rt-duration-normal $rt-easing-ease-in-out;
+
+  &:hover {
+    box-shadow: $rt-shadow-md;
+  }
+}
+
+// Input field mixin
+@mixin input-field {
+  width: 100%;
+  padding: $rt-spacing-3 $rt-spacing-4;
+  font-family: $rt-font-family-primary;
+  font-size: $rt-font-size-base;
+  line-height: $rt-line-height-normal;
+  color: $rt-color-gray-900;
+  background-color: $rt-color-surface-variant-light;
+  border: 1px solid $rt-color-border-light;
+  border-radius: $rt-radius-base;
+  transition: all $rt-duration-fast $rt-easing-ease-in-out;
+
+  &:focus {
+    outline: none;
+    border-color: $rt-color-primary;
+    box-shadow: 0 0 0 2px rgba($rt-color-primary, 0.2);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  &::placeholder {
+    color: $rt-color-gray-500;
+  }
+}
+
+// Container mixin
+@mixin container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $rt-spacing-4;
+  padding-right: $rt-spacing-4;
+
+  @include breakpoint(tablet) {
+    max-width: $rt-breakpoint-tablet;
+  }
+
+  @include breakpoint(desktop) {
+    max-width: $rt-breakpoint-desktop;
+  }
+
+  @include breakpoint(wide) {
+    max-width: $rt-breakpoint-wide;
+  }
+}
+
+// Flexbox utilities
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// Transition mixin
+@mixin transition($properties...) {
+  $transitions: ();
+  @each $property in $properties {
+    $transitions: append($transitions, $property $rt-duration-normal $rt-easing-ease-in-out, comma);
+  }
+  transition: $transitions;
+}
+
+// Truncate text mixin
+@mixin truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin truncate-lines($lines: 2) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// Visually hidden (accessible but invisible)
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+// Focus visible styles (keyboard navigation only)
+@mixin focus-visible {
+  &:focus-visible {
+    outline: 2px solid $rt-color-primary;
+    outline-offset: 2px;
+  }
+}
+
+// Dark theme mixin
+@mixin dark-theme {
+  [data-theme="dark"] &,
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) & {
+      @content;
+    }
+  }
+}

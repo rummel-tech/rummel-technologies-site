@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rummel Technologies - Building innovative software solutions for home automation, fleet management, and more.">
+  <title>Rummel Technologies - Home</title>
+
+  <!-- Rummel Technologies Design System -->
+  <link rel="stylesheet" href="../packages/web-theme/css/variables.css">
+  <link rel="stylesheet" href="/src/styles/main.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav">
+        <div class="nav-brand">
+          <a href="/" class="logo">
+            <span class="logo-icon">R</span>
+            <span class="logo-text">Rummel Technologies</span>
+          </a>
+        </div>
+
+        <ul class="nav-links">
+          <li><a href="#products">Products</a></li>
+          <li><a href="#design-system">Design System</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+          <span class="theme-icon">🌙</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title">Building the Future of Connected Systems</h1>
+        <p class="hero-subtitle">
+          Innovative software solutions for home automation, fleet management,
+          meal planning, and more.
+        </p>
+        <div class="hero-actions">
+          <a href="#products" class="btn btn-primary">Explore Products</a>
+          <a href="#design-system" class="btn btn-outlined">Design System</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="section">
+    <div class="container">
+      <h2 class="section-title">Our Products</h2>
+      <div class="products-grid">
+
+        <!-- Artemis -->
+        <div class="product-card">
+          <div class="product-icon">🏠</div>
+          <h3 class="product-title">Artemis</h3>
+          <p class="product-description">
+            Comprehensive home automation platform integrating multiple services
+            into a unified interface.
+          </p>
+          <a href="#" class="product-link">Learn more →</a>
+        </div>
+
+        <!-- Home Manager -->
+        <div class="product-card">
+          <div class="product-icon">🏡</div>
+          <h3 class="product-title">Home Manager</h3>
+          <p class="product-description">
+            Manage household tasks, maintenance schedules, and home inventory
+            all in one place.
+          </p>
+          <a href="#" class="product-link">Learn more →</a>
+        </div>
+
+        <!-- Vehicle Manager -->
+        <div class="product-card">
+          <div class="product-icon">🚗</div>
+          <h3 class="product-title">Vehicle Manager</h3>
+          <p class="product-description">
+            Track vehicle maintenance, fuel costs, and trip logs with
+            automated reminders.
+          </p>
+          <a href="#" class="product-link">Learn more →</a>
+        </div>
+
+        <!-- Meal Planner -->
+        <div class="product-card">
+          <div class="product-icon">🍳</div>
+          <h3 class="product-title">Meal Planner</h3>
+          <p class="product-description">
+            Plan your meals, manage recipes, and generate shopping lists
+            automatically.
+          </p>
+          <a href="#" class="product-link">Learn more →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Design System Section -->
+  <section id="design-system" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Design System</h2>
+      <p class="section-intro">
+        A centralized design system ensuring consistency across all Rummel Technologies
+        applications and platforms.
+      </p>
+
+      <div class="features-grid">
+        <div class="feature">
+          <h3 class="feature-title">Cross-Platform</h3>
+          <p class="feature-description">
+            Unified design tokens work seamlessly across Flutter, web, iOS, and Android.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3 class="feature-title">Accessible</h3>
+          <p class="feature-description">
+            WCAG 2.1 AA compliant with full light and dark mode support.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3 class="feature-title">Developer Friendly</h3>
+          <p class="feature-description">
+            Available as CSS variables, SCSS mixins, and Tailwind configuration.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3 class="feature-title">Well Documented</h3>
+          <p class="feature-description">
+            Comprehensive guides, examples, and quick reference for all developers.
+          </p>
+        </div>
+      </div>
+
+      <div class="ds-actions">
+        <a href="/docs/DESIGN_SYSTEM_GUIDE.html" class="btn btn-primary">
+          View Documentation
+        </a>
+        <a href="https://github.com/rummel-technologies/rummel-technologies-site" class="btn btn-outlined">
+          View on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">About Rummel Technologies</h2>
+      <p class="about-text">
+        We build innovative software solutions that simplify complex systems.
+        Our focus is on creating intuitive, reliable, and scalable applications
+        that enhance daily life through smart automation and thoughtful design.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Get in Touch</h2>
+      <p class="contact-text">
+        Interested in our products or design system? We'd love to hear from you.
+      </p>
+      <div class="contact-actions">
+        <a href="mailto:contact@rummel.tech" class="btn btn-primary">
+          Email Us
+        </a>
+        <a href="https://github.com/rummel-technologies" class="btn btn-outlined">
+          GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="logo-text">Rummel Technologies</span>
+          <p class="footer-tagline">Building the future of connected systems</p>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-section">
+            <h4>Products</h4>
+            <ul>
+              <li><a href="#">Artemis</a></li>
+              <li><a href="#">Home Manager</a></li>
+              <li><a href="#">Vehicle Manager</a></li>
+              <li><a href="#">Meal Planner</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="/docs/DESIGN_SYSTEM_GUIDE.html">Design System</a></li>
+              <li><a href="https://github.com/rummel-technologies">GitHub</a></li>
+              <li><a href="/docs/DESIGN_SYSTEM_QUICK_REFERENCE.html">Quick Reference</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Rummel Technologies. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
