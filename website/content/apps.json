@@ -1,0 +1,149 @@
+{
+  "meta": {
+    "title": "Rummel Technologies — Your Personal Operating System",
+    "description": "Rummel Technologies builds AI-powered personal productivity apps — fitness, nutrition, home, work, finance, and more — that work standalone or together as your personal operating system."
+  },
+  "hero": {
+    "badge": "AI-Powered Personal Productivity",
+    "title": "Every part of your life,\nintelligently organized.",
+    "subtitle": "Ten apps covering fitness, nutrition, home, work, finance, and more. Use each one on its own, or connect them all through Artemis — your personal AI operating system.",
+    "cta_primary_label": "Get Started Free",
+    "cta_primary_url": "https://app.rummeltech.com/signup",
+    "cta_secondary_label": "Explore Apps",
+    "cta_secondary_url": "#apps"
+  },
+  "signup_url": "https://app.rummeltech.com/signup",
+  "login_url": "https://app.rummeltech.com/login",
+  "apps": [
+    {
+      "id": "artemis_mobile",
+      "name": "Artemis",
+      "icon": "🧠",
+      "tag": "Platform Hub",
+      "tag_style": "hub",
+      "description": "Your AI-powered personal operating system. Artemis orchestrates all your apps with a conversational agent, unified dashboard, and cross-app intelligence. The more apps you connect, the smarter it gets.",
+      "platforms": ["iOS", "Android", "Web"],
+      "app_store_url": null,
+      "play_store_url": null,
+      "featured": true,
+      "coming_soon": false
+    },
+    {
+      "id": "workout_planner",
+      "name": "Workout Planner",
+      "icon": "🏋️",
+      "tag": "Fitness",
+      "tag_style": "default",
+      "description": "AI-generated training plans that adapt to your recovery, readiness, and goals. Full Apple Health integration tracks HRV, sleep, and workout history to optimize every session.",
+      "platforms": ["iOS", "Android", "Web"],
+      "app_store_url": null,
+      "play_store_url": null,
+      "featured": false,
+      "coming_soon": false
+    },
+    {
+      "id": "meal_planner",
+      "name": "Meal Planner",
+      "icon": "🍽️",
+      "tag": "Nutrition",
+      "tag_style": "default",
+      "description": "Personalized meal planning and nutrition tracking that automatically adjusts your calorie targets based on your workouts. Generate shopping lists and manage recipes with ease.",
+      "platforms": ["iOS", "Web"],
+      "app_store_url": null,
+      "play_store_url": null,
+      "featured": false,
+      "coming_soon": false
+    },
+    {
+      "id": "home_manager",
+      "name": "Home Manager",
+      "icon": "🏡",
+      "tag": "Home",
+      "tag_style": "default",
+      "description": "Stay on top of household tasks, maintenance schedules, and home inventory. Smart reminders surface the right task at the right time so nothing slips through the cracks.",
+      "platforms": ["iOS", "Web"],
+      "app_store_url": null,
+      "play_store_url": null,
+      "featured": false,
+      "coming_soon": false
+    },
+    {
+      "id": "vehicle_manager",
+      "name": "Vehicle Manager",
+      "icon": "🚗",
+      "tag": "Transport",
+      "tag_style": "default",
+      "description": "Track maintenance schedules, fuel costs, and trip logs for all your vehicles. Automated reminders for oil changes, inspections, and registration so you're never caught off guard.",
+      "platforms": ["iOS", "Web"],
+      "app_store_url": null,
+      "play_store_url": null,
+      "featured": false,
+      "coming_soon": false
+    },
+    {
+      "id": "work_planner",
+      "name": "Work Planner",
+      "icon": "💼",
+      "tag": "Productivity",
+      "tag_style": "default",
+      "description": "Structured work planning for both corporate and entrepreneurial endeavors. Manage projects, priorities, and weekly rhythms in a single focused workspace built for deep work.",
+      "platforms": ["iOS", "Android", "Web"],
+      "app_store_url": null,
+      "play_store_url": null,
+      "featured": false,
+      "coming_soon": false
+    },
+    {
+      "id": "education_planner",
+      "name": "Education Planner",
+      "icon": "📚",
+      "tag": "Learning",
+      "tag_style": "default",
+      "description": "Set meaningful learning goals and build weekly study plans that fit your life. Track progress across courses, books, certifications, and self-directed study with clarity and momentum.",
+      "platforms": ["iOS", "Web"],
+      "app_store_url": null,
+      "play_store_url": null,
+      "featured": false,
+      "coming_soon": false
+    },
+    {
+      "id": "focus_training",
+      "name": "Focus Training",
+      "icon": "🎯",
+      "tag": "Mental Performance",
+      "tag_style": "default",
+      "description": "Build your focus like a muscle. Gamified sessions with XP, levels, and achievements make deep work rewarding. Progressively longer intervals train sustainable concentration over time.",
+      "platforms": ["iOS", "Web"],
+      "app_store_url": null,
+      "play_store_url": null,
+      "featured": false,
+      "coming_soon": false
+    },
+    {
+      "id": "content_planner",
+      "name": "Content Planner",
+      "icon": "🎧",
+      "tag": "Media",
+      "tag_style": "default",
+      "description": "Curate an intentional audio-first media diet. Queue podcasts, audiobooks, and lectures aligned to your education and growth goals — not whatever the algorithm serves next.",
+      "platforms": ["iOS", "Web"],
+      "app_store_url": null,
+      "play_store_url": null,
+      "featured": false,
+      "coming_soon": false
+    },
+    {
+      "id": "investment_manager",
+      "name": "Investment Manager",
+      "icon": "📈",
+      "tag": "Finance",
+      "tag_style": "default",
+      "description": "Portfolio tracking, performance analysis, and tax insights in one place. Monitor your investments with clear visualizations of allocation, returns, and realized gains — without the noise.",
+      "platforms": ["iOS", "Web"],
+      "app_store_url": null,
+      "play_store_url": null,
+      "featured": false,
+      "coming_soon": false
+    }
+  ]
+}

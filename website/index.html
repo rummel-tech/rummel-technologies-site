@@ -1,226 +1,329 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Rummel Technologies - Building innovative software solutions for home automation, fleet management, and more.">
-  <title>Rummel Technologies - Home</title>
+  <meta name="description" content="Rummel Technologies builds AI-powered personal productivity apps — fitness, nutrition, home, work, finance, and more — that work standalone or together as your personal operating system.">
+  <title>Rummel Technologies — Your Personal Operating System</title>
 
-  <!-- Rummel Technologies Design System -->
   <link rel="stylesheet" href="../packages/web-theme/css/variables.css">
   <link rel="stylesheet" href="/src/styles/main.css">
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 </head>
 <body>
-  <!-- Header -->
+
+  <!-- ------------------------------------------------------------------ -->
+  <!-- Header                                                               -->
+  <!-- ------------------------------------------------------------------ -->
   <header class="site-header">
     <div class="container">
       <nav class="nav">
-        <div class="nav-brand">
-          <a href="/" class="logo">
-            <span class="logo-icon">R</span>
-            <span class="logo-text">Rummel Technologies</span>
-          </a>
-        </div>
+        <a href="/" class="nav-brand">
+          <span class="logo-icon">R</span>
+          <span class="logo-text">Rummel Technologies</span>
+        </a>
 
-        <ul class="nav-links">
-          <li><a href="#products">Products</a></li>
-          <li><a href="#design-system">Design System</a></li>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#platform">Platform</a></li>
+          <li><a href="#apps">Apps</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><a href="#get-started" class="nav-cta">Get Started</a></li>
         </ul>
 
-        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
-          <span class="theme-icon">🌙</span>
-        </button>
+        <div class="nav-controls">
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+            <span class="theme-icon">🌙</span>
+          </button>
+          <button class="menu-btn" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+            <span class="menu-icon">☰</span>
+          </button>
+        </div>
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- ------------------------------------------------------------------ -->
+  <!-- Hero                                                                 -->
+  <!-- ------------------------------------------------------------------ -->
   <section class="hero">
     <div class="container">
       <div class="hero-content">
-        <h1 class="hero-title">Building the Future of Connected Systems</h1>
+        <div class="hero-badge">AI-Powered Personal Productivity</div>
+        <h1 class="hero-title">Every part of your life,<br>intelligently organized.</h1>
         <p class="hero-subtitle">
-          Innovative software solutions for home automation, fleet management,
-          meal planning, and more.
+          Ten apps covering fitness, nutrition, home, work, finance, and more.
+          Use each one on its own, or connect them all through Artemis — your personal AI operating system.
         </p>
         <div class="hero-actions">
-          <a href="#products" class="btn btn-primary">Explore Products</a>
-          <a href="#design-system" class="btn btn-outlined">Design System</a>
+          <a id="hero-cta-primary" href="#get-started" class="btn btn-primary btn-lg">Get Started Free</a>
+          <a id="hero-cta-secondary" href="#apps" class="btn btn-outlined btn-lg">Explore Apps</a>
+        </div>
+        <div class="hero-platforms">
+          <span class="platform-label">Available on</span>
+          <span class="platform-badge">iOS</span>
+          <span class="platform-badge">Android</span>
+          <span class="platform-badge">Web</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Products Section -->
-  <section id="products" class="section">
+  <!-- ------------------------------------------------------------------ -->
+  <!-- Platform — Artemis                                                   -->
+  <!-- ------------------------------------------------------------------ -->
+  <section id="platform" class="section section-alt">
     <div class="container">
-      <h2 class="section-title">Our Products</h2>
-      <div class="products-grid">
-
-        <!-- Artemis -->
-        <div class="product-card">
-          <div class="product-icon">🏠</div>
-          <h3 class="product-title">Artemis</h3>
-          <p class="product-description">
-            Comprehensive home automation platform integrating multiple services
-            into a unified interface.
+      <div class="platform-layout">
+        <div class="platform-text">
+          <div class="section-eyebrow">The Platform</div>
+          <h2 class="section-title-left">Meet Artemis, your personal AI</h2>
+          <p class="platform-description">
+            Artemis is the intelligence layer that connects all your Rummel apps.
+            It learns your patterns, surfaces insights across your entire life, and
+            acts as a conversational assistant that understands the full picture —
+            your workouts, meals, finances, home, and work, all in one place.
           </p>
-          <a href="#" class="product-link">Learn more →</a>
+          <ul class="platform-features">
+            <li>
+              <span class="feature-check">✓</span>
+              <span>Unified dashboard across all your apps</span>
+            </li>
+            <li>
+              <span class="feature-check">✓</span>
+              <span>AI agent that understands your full context</span>
+            </li>
+            <li>
+              <span class="feature-check">✓</span>
+              <span>Cross-app insights — e.g. adjust calories based on today's workout</span>
+            </li>
+            <li>
+              <span class="feature-check">✓</span>
+              <span>Every app still works perfectly standalone</span>
+            </li>
+          </ul>
+          <div class="platform-actions">
+            <a href="#get-started" class="btn btn-primary">Try Artemis Free</a>
+            <a href="#apps" class="btn btn-text">Or pick individual apps →</a>
+          </div>
         </div>
-
-        <!-- Home Manager -->
-        <div class="product-card">
-          <div class="product-icon">🏡</div>
-          <h3 class="product-title">Home Manager</h3>
-          <p class="product-description">
-            Manage household tasks, maintenance schedules, and home inventory
-            all in one place.
-          </p>
-          <a href="#" class="product-link">Learn more →</a>
+        <div class="platform-visual">
+          <div class="platform-card-stack">
+            <div class="pcard pcard-1">🏋️ Workout completed — 420 kcal burned</div>
+            <div class="pcard pcard-2">🍽️ Meal plan updated for calorie target</div>
+            <div class="pcard pcard-3">💤 Recovery score: 87 — ready to train</div>
+            <div class="pcard pcard-hub">
+              <span class="pcard-hub-label">Artemis</span>
+              <span class="pcard-hub-sub">Your personal AI</span>
+            </div>
+          </div>
         </div>
-
-        <!-- Vehicle Manager -->
-        <div class="product-card">
-          <div class="product-icon">🚗</div>
-          <h3 class="product-title">Vehicle Manager</h3>
-          <p class="product-description">
-            Track vehicle maintenance, fuel costs, and trip logs with
-            automated reminders.
-          </p>
-          <a href="#" class="product-link">Learn more →</a>
-        </div>
-
-        <!-- Meal Planner -->
-        <div class="product-card">
-          <div class="product-icon">🍳</div>
-          <h3 class="product-title">Meal Planner</h3>
-          <p class="product-description">
-            Plan your meals, manage recipes, and generate shopping lists
-            automatically.
-          </p>
-          <a href="#" class="product-link">Learn more →</a>
-        </div>
-
       </div>
     </div>
   </section>
 
-  <!-- Design System Section -->
-  <section id="design-system" class="section section-alt">
+  <!-- ------------------------------------------------------------------ -->
+  <!-- Apps                                                                 -->
+  <!-- ------------------------------------------------------------------ -->
+  <section id="apps" class="section">
     <div class="container">
-      <h2 class="section-title">Design System</h2>
+      <div class="section-eyebrow center">The Full Suite</div>
+      <h2 class="section-title">Ten apps. One ecosystem.</h2>
       <p class="section-intro">
-        A centralized design system ensuring consistency across all Rummel Technologies
-        applications and platforms.
+        Each app is a complete, polished product that stands on its own.
+        Connect them through Artemis and they become something greater.
       </p>
 
-      <div class="features-grid">
-        <div class="feature">
-          <h3 class="feature-title">Cross-Platform</h3>
-          <p class="feature-description">
-            Unified design tokens work seamlessly across Flutter, web, iOS, and Android.
+      <!-- Populated by main.js from content/apps.json -->
+      <div class="apps-grid" id="apps-container"></div>
+    </div>
+  </section>
+
+  <!-- ------------------------------------------------------------------ -->
+  <!-- How it works                                                         -->
+  <!-- ------------------------------------------------------------------ -->
+  <section id="how-it-works" class="section section-alt">
+    <div class="container">
+      <div class="section-eyebrow center">Flexible by Design</div>
+      <h2 class="section-title">Your way, from day one</h2>
+      <p class="section-intro">
+        Every app is a complete product. Start with one. Add more when you're ready.
+        Connect them all through Artemis when you want the full picture.
+      </p>
+
+      <div class="how-grid">
+        <div class="how-card">
+          <div class="how-step">1</div>
+          <h3 class="how-title">Pick any app</h3>
+          <p class="how-description">
+            Download any Rummel app on iOS or use it on the web.
+            Sign up for free and get full standalone functionality immediately.
           </p>
         </div>
-
-        <div class="feature">
-          <h3 class="feature-title">Accessible</h3>
-          <p class="feature-description">
-            WCAG 2.1 AA compliant with full light and dark mode support.
+        <div class="how-card">
+          <div class="how-step">2</div>
+          <h3 class="how-title">Add more as you need</h3>
+          <p class="how-description">
+            Each app you add enriches your toolkit. They share the same
+            account, so sign-in is seamless across all of them.
           </p>
         </div>
-
-        <div class="feature">
-          <h3 class="feature-title">Developer Friendly</h3>
-          <p class="feature-description">
-            Available as CSS variables, SCSS mixins, and Tailwind configuration.
+        <div class="how-card">
+          <div class="how-step">3</div>
+          <h3 class="how-title">Connect through Artemis</h3>
+          <p class="how-description">
+            Enable the Artemis platform to link your apps together.
+            Your AI gets smarter with every connection — and your
+            apps start working as one.
           </p>
         </div>
-
-        <div class="feature">
-          <h3 class="feature-title">Well Documented</h3>
-          <p class="feature-description">
-            Comprehensive guides, examples, and quick reference for all developers.
-          </p>
-        </div>
-      </div>
-
-      <div class="ds-actions">
-        <a href="/docs/DESIGN_SYSTEM_GUIDE.html" class="btn btn-primary">
-          View Documentation
-        </a>
-        <a href="https://github.com/rummel-technologies/rummel-technologies-site" class="btn btn-outlined">
-          View on GitHub
-        </a>
       </div>
     </div>
   </section>
 
-  <!-- About Section -->
+  <!-- ------------------------------------------------------------------ -->
+  <!-- Get Started / Sign Up                                                -->
+  <!-- ------------------------------------------------------------------ -->
+  <section id="get-started" class="section section-cta">
+    <div class="container">
+      <h2 class="section-title light">Start building your personal OS today</h2>
+      <p class="section-intro light">
+        Create a free account and try any app immediately. No credit card required.
+      </p>
+      <div class="cta-actions">
+        <a href="https://app.rummeltech.com/signup" class="btn btn-white btn-lg">
+          Create Free Account
+        </a>
+        <a href="#apps" class="btn btn-outlined-white btn-lg">
+          Browse Apps
+        </a>
+      </div>
+      <p class="cta-sub">
+        Already have an account?
+        <a href="https://app.rummeltech.com/login" class="cta-login-link">Sign in →</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ------------------------------------------------------------------ -->
+  <!-- About                                                                -->
+  <!-- ------------------------------------------------------------------ -->
   <section id="about" class="section">
     <div class="container">
-      <h2 class="section-title">About Rummel Technologies</h2>
-      <p class="about-text">
-        We build innovative software solutions that simplify complex systems.
-        Our focus is on creating intuitive, reliable, and scalable applications
-        that enhance daily life through smart automation and thoughtful design.
-      </p>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="section section-alt">
-    <div class="container">
-      <h2 class="section-title">Get in Touch</h2>
-      <p class="contact-text">
-        Interested in our products or design system? We'd love to hear from you.
-      </p>
-      <div class="contact-actions">
-        <a href="mailto:contact@rummel.tech" class="btn btn-primary">
-          Email Us
-        </a>
-        <a href="https://github.com/rummel-technologies" class="btn btn-outlined">
-          GitHub
-        </a>
+      <div class="about-layout">
+        <div class="about-text-block">
+          <div class="section-eyebrow">Our Story</div>
+          <h2 class="section-title-left">Built for people who take their life seriously</h2>
+          <p class="about-text">
+            Rummel Technologies was founded on a simple belief: the best personal
+            software should work together, not in silos. We've spent too long
+            jumping between disconnected apps that each tell part of the story but
+            never the whole one.
+          </p>
+          <p class="about-text">
+            Every app we build is designed to stand alone as a polished, focused tool.
+            But they're also designed to connect — sharing context and intelligence
+            through Artemis so that your fitness, nutrition, finances, home, and work
+            can finally inform each other the way they do in real life.
+          </p>
+          <p class="about-text">
+            We're a small, focused team committed to building software that respects
+            your attention, protects your data, and genuinely improves your daily life.
+          </p>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <div class="stat-number">10</div>
+            <div class="stat-label">Apps in the suite</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">1</div>
+            <div class="stat-label">Unified platform</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">iOS</div>
+            <div class="stat-label">& Web first</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">0</div>
+            <div class="stat-label">Data sold to third parties</div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- ------------------------------------------------------------------ -->
+  <!-- Contact                                                              -->
+  <!-- ------------------------------------------------------------------ -->
+  <section id="contact" class="section section-alt">
+    <div class="container contact-layout">
+      <div>
+        <h2 class="section-title-left">Get in touch</h2>
+        <p class="contact-text">
+          Questions about our apps, enterprise use, or press inquiries —
+          we read every email.
+        </p>
+        <div class="contact-actions">
+          <a href="mailto:hello@rummeltech.com" class="btn btn-primary">
+            hello@rummeltech.com
+          </a>
+        </div>
+      </div>
+      <div class="contact-links">
+        <h4>Follow along</h4>
+        <ul>
+          <li><a href="https://github.com/rummel-technologies" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://twitter.com/rummeltech" target="_blank" rel="noopener">Twitter / X</a></li>
+        </ul>
+        <h4>Support</h4>
+        <ul>
+          <li><a href="mailto:support@rummeltech.com">support@rummeltech.com</a></li>
+          <li><a href="#" class="link-placeholder">Privacy Policy</a></li>
+          <li><a href="#" class="link-placeholder">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ------------------------------------------------------------------ -->
+  <!-- Footer                                                               -->
+  <!-- ------------------------------------------------------------------ -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-content">
         <div class="footer-brand">
-          <span class="logo-text">Rummel Technologies</span>
-          <p class="footer-tagline">Building the future of connected systems</p>
+          <a href="/" class="footer-logo">
+            <span class="logo-icon logo-icon-sm">R</span>
+            <span class="logo-text">Rummel Technologies</span>
+          </a>
+          <p class="footer-tagline">Your personal operating system.</p>
         </div>
 
         <div class="footer-links">
           <div class="footer-section">
-            <h4>Products</h4>
+            <h4>Platform</h4>
             <ul>
-              <li><a href="#">Artemis</a></li>
-              <li><a href="#">Home Manager</a></li>
-              <li><a href="#">Vehicle Manager</a></li>
-              <li><a href="#">Meal Planner</a></li>
+              <li><a href="#platform">Artemis</a></li>
+              <li><a href="#how-it-works">How It Works</a></li>
+              <li><a href="#get-started">Get Started</a></li>
             </ul>
           </div>
 
           <div class="footer-section">
-            <h4>Resources</h4>
+            <h4>Apps</h4>
             <ul>
-              <li><a href="/docs/DESIGN_SYSTEM_GUIDE.html">Design System</a></li>
-              <li><a href="https://github.com/rummel-technologies">GitHub</a></li>
-              <li><a href="/docs/DESIGN_SYSTEM_QUICK_REFERENCE.html">Quick Reference</a></li>
+              <li><a href="#apps">Workout Planner</a></li>
+              <li><a href="#apps">Meal Planner</a></li>
+              <li><a href="#apps">Home Manager</a></li>
+              <li><a href="#apps">Work Planner</a></li>
+              <li><a href="#apps">Investment Manager</a></li>
+              <li><a href="#apps">+ 5 more</a></li>
             </ul>
           </div>
 
@@ -229,13 +332,22 @@
             <ul>
               <li><a href="#about">About</a></li>
               <li><a href="#contact">Contact</a></li>
+              <li><a href="https://github.com/rummel-technologies" target="_blank" rel="noopener">GitHub</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="#" class="link-placeholder">Privacy Policy</a></li>
+              <li><a href="#" class="link-placeholder">Terms of Service</a></li>
             </ul>
           </div>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 Rummel Technologies. All rights reserved.</p>
+        <p>&copy; 2026 Rummel Technologies LLC. All rights reserved.</p>
       </div>
     </div>
   </footer>
